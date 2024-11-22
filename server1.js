@@ -46,8 +46,6 @@ app.get('/collection/:collectionName', (req, res, next) => {
     })
 })
 
-
-
 //adding post
 app.post('/collection/:collectionName', (req, res, next) => {
     req.collection.insert(req.body, (e, results) => {
@@ -58,7 +56,6 @@ app.post('/collection/:collectionName', (req, res, next) => {
 
 
     // return with object id 
-    
     const ObjectID = require('mongodb').ObjectID;
     app.get('/collection/:collectionName/:id'
     , (req, res, next) => {
