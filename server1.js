@@ -1,10 +1,11 @@
 // Import dependencies modules:
 const express = require('express')
-// const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 
 // Create an Express.js instance:
 const app = express()
+const PORT = 3000;
 
 // config Express.js
 app.use(express.json())
@@ -18,9 +19,7 @@ app.use ((req,res,next) => {
 const MongoClient = require('mongodb').MongoClient;
 
 let db;
-//MongoClient.connect('mongodb+srv://MyMongoDBUser:wednesday@cluster0.epqbr.mongodb.net', (err, client) => {
- //   db = client.db('webstore')
-//})
+
 MongoClient.connect('mongodb+srv://sidratahir145:wednesday@cluster0.1pssr.mongodb.net/', (err, client) => {
     db = client.db('Webstore')
 })
