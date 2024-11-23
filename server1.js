@@ -56,7 +56,7 @@ app.post('/collection/:collectionName', (req, res, next) => {
     })
     
     // return with object id 
-    
+    //adding get
     const ObjectID = require('mongodb').ObjectID;
     app.get('/collection/:collectionName/:id'
     , (req, res, next) => {
@@ -68,7 +68,7 @@ app.post('/collection/:collectionName', (req, res, next) => {
     
     
     //update an object 
-    
+    //adding put
     app.put('/collection/:collectionName/:id', (req, res, next) => {
     req.collection.update(
     {_id: new ObjectID(req.params.id)},
@@ -83,7 +83,7 @@ app.post('/collection/:collectionName', (req, res, next) => {
     
     
     
-    
+    //adding delete
     app.delete('/collection/:collectionName/:id', (req, res, next) => {
     req.collection.deleteOne(
     { _id: ObjectID(req.params.id) },(e, result) => {
