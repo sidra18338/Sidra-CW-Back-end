@@ -1,7 +1,7 @@
 {
   "name": "sidra",
   "version": "1.0.0",
-  "description": "",
+  "description": "Links",
   "scripts": {
     "start": " node server1.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,8 @@
     "body-parser": "^1.19.0",
     "express": "^4.21.1",
     "mongodb": "^3.6.3"
-  }
+  },
+  "main": "server1.js",
+  "author": "",
+  "license": "ISC"
 }

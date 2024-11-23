@@ -1,11 +1,11 @@
 // Import dependencies modules:
 const express = require('express')
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 
 // Create an Express.js instance:
 const app = express();
-const PORT= 3000;
+// const PORT= 3000;
 
 // config Express.js
 app.use(express.json())
