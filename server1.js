@@ -15,12 +15,19 @@ app.use ((req,res,next) => {
 })
 
 // connect to MongoDB
-const MongoClient = require('mongodb').MongoClient;
-
 let db;
-MongoClient.connect('mongodb+srv://sidratahir145:wednesday@cluster0.1pssr.mongodb.net/', (err, client) => {
-    db = client.db('Webstore')
-})
+MongoClient.connect(
+  'mongodb+srv://sidratahir145:wednesday@cluster0.1pssr.mongodb.net/',
+  { useUnifiedTopology: true },
+  (err, client) => {
+    if (err) {
+      console.error('Failed to connect to MongoDB:', err);
+      process.exit(1);
+    }
+    console.log('Connected to MongoDB');
+    db = client.db('webstore');
+  }
+);
 
 
 // dispaly a message for root path to show that API is working
